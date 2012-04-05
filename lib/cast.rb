@@ -6,11 +6,11 @@ libdir = ENV['CAST_LIBDIR'] || 'cast'
 extdir += '/' unless extdir.empty?
 libdir += '/' unless libdir.empty?
 
-require "#{extdir}cast_ext.so"
-require "#{libdir}node.rb"
-require "#{libdir}node_list.rb"
-require "#{libdir}c_nodes.rb"
-require "#{libdir}c.tab.rb"
-require "#{libdir}parse.rb"
-require "#{libdir}to_s.rb"
-require "#{libdir}inspect.rb"
+require "#{extdir}cast_ext"
+require "#{libdir}node"
+require "#{libdir}node_list"
+require "#{libdir}c_nodes"
+require "#{libdir}c.tab"
+require "#{libdir}parse"
+require "#{libdir}to_s"
+require "#{libdir}inspect"
