@@ -11,7 +11,7 @@ else
 LIBRARY=cast_ext.so
 endif
 
-.PHONY: clean irb gem
+.PHONY: clean irb gem push-gem
 
 all: ext/cast19/$(LIBRARY)
 
@@ -26,6 +26,9 @@ ext/cast19/Makefile: ext/cast19/extconf.rb
 
 gem: Makefile cast19.gemspec $(SRC) $(EXT)
 	gem build cast19.gemspec
+
+push-gem: gem
+	gem push $(GEM)
 
 clean:	
 	rm -f ext/cast19/$(LIBRARY)
