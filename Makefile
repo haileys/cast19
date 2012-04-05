@@ -31,3 +31,4 @@ clean:
 	rm -f ext/cast19/$(LIBRARY)
 	rm -f ext/cast19/Makefile
 	rm -f ext/cast19/*.o
+	rm -f *.gem
