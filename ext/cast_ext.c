@@ -1,6 +1,6 @@
 #include "cast.h"
 
-VALUE cast_mC;
+extern VALUE cast_mC;
 
 /* Initialize the cast_ext module.
  */
