@@ -1,4 +1,4 @@
-GEM_VERSION=0.1.0
+GEM_VERSION=0.1.1
 GEM=cast19-$(GEM_VERSION).gem
 
 SRC=$(shell find lib | grep -P '\.rb$$')
@@ -24,7 +24,7 @@ ext/cast19/cast_ext.%: ext/cast19/Makefile $(EXT)
 ext/cast19/Makefile: ext/cast19/extconf.rb
 	cd ext/cast19/ && ruby extconf.rb
 
-gem: cast19.gemspec $(SRC) $(EXT)
+gem: Makefile cast19.gemspec $(SRC) $(EXT)
 	gem build cast19.gemspec
 
 clean:	

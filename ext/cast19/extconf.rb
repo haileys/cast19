@@ -1,2 +1,2 @@
 require 'mkmf'
-create_makefile('cast_ext')
+create_makefile('cast19/cast_ext')
