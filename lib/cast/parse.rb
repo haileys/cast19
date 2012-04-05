@@ -227,7 +227,6 @@ module C
 
   #### Make sure we didn't miss any
   CORE_C_NODE_CLASSES.each do |c|
-    c.methods.include? 'parse' or
-      raise "#{c}#parse not defined"
+    raise "#{c}#parse not defined" unless c.respond_to? :parse
   end
 end
