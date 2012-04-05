@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "cast19"
-  s.version     = File.readlines("Makefile").first.split("=").last
+  s.version     = File.read("Makefile").match(/GEM_VERSION=(.*)$/)[1].strip
   s.date        = "2012-04-05"
   s.summary     = "Ruby's C parsing dog. Woof."
   s.description = "A C99 capable C parser library for Ruby"
